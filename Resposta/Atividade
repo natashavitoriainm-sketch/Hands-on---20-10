@@ -130,4 +130,89 @@ public class Main {
 }
 
 5-Sequência contrária
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    
+		String[] nomes = new String[15];
+		
+		for (int i = 0; i < 15; i++) {
+		    System.out.println("Digite um nome: ");
+		    nomes[i] = sc.nextLine(); 
+		}    
+		    for (int i = 14; i >= 0; i--) {
+		    System.out.println(nomes[i]);
+		    }
+	}
+}
 
+6-Multiplicação do elemento
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    
+	    int[] A = new int[8];
+	    int[] B = new int[8];
+	    
+	    for (int i = 0; i < 8; i++) {
+	        System.out.println("Digite um numero inteiro: ");
+	        A[i] = sc.nextInt();
+	    }
+	      for (int i = 0; i < 8; i++) {
+	          B[i] = A[i] * 3;
+	      }
+	       System.out.println("Vetor A | Vetor B");
+
+          for (int i = 0; i < 8; i++) {
+           System.out.println(A[i] + "       | " + B[i]);
+        }
+	}
+}
+
+7-Números pares e impar
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    
+	    int[] numeros = new int[6];
+	    int[] pares = new int[6];
+        int[] impar = new int[6];
+        
+	    int p = 0;
+        int im = 0;
+        int somaPares = 0;
+        int quantidadeImpares = 0;
+	    
+	    for (int i = 0; i < 6; i++) {
+        System.out.println("Digite um número inteiro: ");
+        numeros[i] = sc.nextInt();
+        
+        if (numeros[i] % 2 == 0) {
+        somaPares = somaPares + numeros[i];
+        pares[p] = numeros[i];
+        p++;
+        
+        } else {
+        quantidadeImpares++;
+        impar[im] = numeros[i];
+        im++;
+        }
+	  }
+       System.out.println("Os números pares:");
+       for (int i = 0; i < p; i++) {
+       System.out.println(pares[i]);
+    }
+
+      System.out.println("A soma dos pares: " + somaPares);
+
+      System.out.println("Os números ímpares:");
+      for (int i = 0; i < im; i++) {
+      System.out.println(impar[i]);
+    }
+
+     System.out.println("A quantidade de ímpares: " + quantidadeImpares);
+	}
+}
