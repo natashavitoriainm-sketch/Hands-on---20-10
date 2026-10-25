@@ -18,3 +18,116 @@ H. x[x[1]] : 56, indice 7.
 I. x[x[y+z]] : 9, indice 4.
 
 2-Vetores
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        int[] vetor1 = {3, 5, 4, 2, 2, 5, 3, 2, 5, 9};
+
+        int[] vetor2 = {7, 15, 20, 0, 18, 4, 55, 23, 8, 6};
+
+        int[] resultado = new int[20];
+
+        int j = 0;
+
+        for (int i = 0; i < 10; i++) {
+            resultado[j] = vetor1[i];
+            j++;
+
+            resultado[j] = vetor2[i];
+            j++;
+        }
+        
+        System.out.println("Vetor 1: " + java.util.Arrays.toString(vetor1));
+        
+        System.out.println("Vetor 2: " + java.util.Arrays.toString(vetor2));
+        
+        System.out.print("Intercalação: [");
+
+        for (int i = 0; i < 20; i++) {
+            System.out.print(resultado[i]);
+
+            if (i < 19) {
+                System.out.print(", ");
+            }
+        }
+
+        System.out.println("]");
+    }
+}
+
+3-Vetores resultantes
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+        int[] numeros = new int[8];
+        int[] positivos = new int[8];
+        int[] negativos = new int[8];
+        
+        int p = 0;
+        int n = 0;
+        
+        for (int i = 0; i < 8; i++) {
+        System.out.println("Digite o número " + (i + 1) + ": ");
+           numeros[i] = sc.nextInt();
+            }
+        for (int i = 0; i < 8; i++) {
+            if (numeros[i] > 0) {
+            positivos[p] = numeros[i];
+            p++;
+            
+            }else if (numeros[i] < 0){
+                negativos[n] = numeros[i];
+                n++;
+            }
+        } 
+        System.out.println("Positivos: ");
+        for (int i = 0; i < p; i++) {
+        System.out.println(positivos[i]);    
+        }
+        System.out.println("Negativos: ");
+        for (int i = 0; i < n; i++) {
+        System.out.println(negativos[i]);    
+         }
+        }
+    }
+
+4-Números primos
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+        int[] numeros = new int[10];
+        
+       for (int i = 0; i < 10; i++) {
+        System.out.println("Digite um numero inteiro: ");
+        numeros[i] = sc.nextInt();
+       }
+       
+       for (int i = 0; i < 10; i++) {
+        int numero = numeros[i];  
+       
+       if (numero > 1) {
+           boolean primo = true;
+           
+       for (int j =2; j < numero; j++) {
+            
+            
+         if (numero % j ==0) {
+            primo = false; 
+            break;
+         }   
+        }
+        if (primo) {
+        System.out.println("Número: " + numero + " Posição: " + (i + 1)); 
+        }
+       }
+     }
+    }
+}
+
+5-Sequência contrária
+
