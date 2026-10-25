@@ -1,1 +1,37 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
 
+        int[] vetor1 = {3, 5, 4, 2, 2, 5, 3, 2, 5, 9};
+
+        int[] vetor2 = {7, 15, 20, 0, 18, 4, 55, 23, 8, 6};
+
+        int[] resultado = new int[20];
+
+        int j = 0;
+
+        for (int i = 0; i < 10; i++) {
+            resultado[j] = vetor1[i];
+            j++;
+
+            resultado[j] = vetor2[i];
+            j++;
+        }
+        
+        System.out.println("Vetor 1: " + java.util.Arrays.toString(vetor1));
+        
+        System.out.println("Vetor 2: " + java.util.Arrays.toString(vetor2));
+        
+        System.out.print("Intercalação: [");
+
+        for (int i = 0; i < 20; i++) {
+            System.out.print(resultado[i]);
+
+            if (i < 19) {
+                System.out.print(", ");
+            }
+        }
+
+        System.out.println("]");
+    }
+}
